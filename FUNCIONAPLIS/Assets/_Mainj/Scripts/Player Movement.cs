@@ -1,22 +1,30 @@
 using UnityEngine;
+using UnityEngine.AI;
 
 public class PlayerMovement : MonoBehaviour
 {
-    //Variables
+    public float altura = 1.80f;
+    public int edad = 2077;
+    public string nombre = "Galaa";
+    public bool puedeVotar = true; 
 
-    private float fuerza = 500f
+    public GameObject gameObject;
+    public Rigidbody2D rigitbody2D;
+    public Collider2D collider2D;
+    public SpriteRenderer spriteRenderer;
+    public Transform transform;
+    //crear variable de tipo transform
 
-    [SerializeField] private Rigidbody2D _rigidbody2D;
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private void Start()
     {
-        _rigidbody2D.AddForce(Vector2.right * fuerza);
+        Debug.Log ("Hola: " + nombre + " tu edad es: " + edad + " tu altura es: " + altura);
+        rigitbody2D.simulated = false;
+        spriteRenderer.color = Color.red;
+        transform.position = new Vector3(10f, 0f, 0f);
 
+        //llamo mi variable de tipo tranform y le asigno un valor en x de 10
     }
-
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
         
     }
