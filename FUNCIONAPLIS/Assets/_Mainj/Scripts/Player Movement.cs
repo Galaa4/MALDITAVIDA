@@ -7,20 +7,23 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float _speed = 5f;
 
     [SerializeField] private Rigidbody2D _rigitbody2D;
+    [SerializeField] private GroundCheck _groundCheck;
     //crear variable de tipo transform
 
-    private void Start()
+    private void Awake()
     {
-        _rigitbody2D = GetComponent<Rigidbody2D>();
-
-        //llamo mi variable de tipo tranform y le asigno un valor en x de 10
+        _rigitbody2D = GetComponent<Rigidbody2D>();    
+    
     }
-    private void Update()
+    private void FixedUpdate()
     {
-        if (Input.GetKey(KeyCode.Space))
+        if (_groundCheck.isGround)
         {
-            _rigitbody2D.AddForce(Vector2.up* _force);
-            //se ejecuta si se cumple la condicion
+            if (Input.GetKey(KeyCode.Space))
+            {
+                _rigitbody2D.AddForce(Vector2.up* _force);
+                Debug.Log("tecla presionada");
+            }
         }
         _rigitbody2D.linearVelocity = Vector2.right * _speed;
     }
