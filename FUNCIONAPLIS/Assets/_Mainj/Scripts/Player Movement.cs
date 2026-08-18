@@ -30,7 +30,7 @@ public class PlayerMovement : MonoBehaviour
         {
             _rigitbody2D.AddForce(Vector2.up * _jumpforce, ForceMode2D.Impulse);
             _jumpRequested = false;
-            Debug.Log("¡Salto ejecutado!");
+            Debug.Log("Salto ejecutado :D");
         }
 
         _rigitbody2D.linearVelocity = new Vector2(_movementspeed, _rigitbody2D.linearVelocity.y);
