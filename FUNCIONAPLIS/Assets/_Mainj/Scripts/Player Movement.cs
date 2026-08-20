@@ -8,6 +8,9 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Rigidbody2D _rigitbody2D;
     [SerializeField] private GroundCheck _groundCheck;
 
+    [SerializeField] private float _jumpBufferTime = 0.75f;
+    private float _jumpBufferCounter;
+
     private bool _jumpRequested;
 
     private void Awake()
@@ -18,9 +21,19 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && _groundCheck.isGround)
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            _jumpBufferCounter = _jumpBufferTime;
+        }
+        else
+        {
+            _jumpBufferCounter -= Time.deltaTime;
+        }
+
+        if (_jumpBufferCounter > 0f && _groundCheck.isGround)
         {
             _jumpRequested = true;
+            _jumpBufferCounter = 0f;
         }
     }
 
