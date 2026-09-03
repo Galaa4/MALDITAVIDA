@@ -15,7 +15,7 @@ public class MovimientoJugador : MonoBehaviour
     private void FixedUpdate()
     {
         if (_detectorSuelo.estaEnSuelo)
-        {
+        { 
             if (Input.GetKey(KeyCode.Space))
             {
                 _cuerpoRigido2D.AddForce(Vector2.up * _fuerzaSalto, ForceMode2D.Impulse);

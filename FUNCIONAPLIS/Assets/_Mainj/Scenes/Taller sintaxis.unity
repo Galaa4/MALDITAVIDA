@@ -362,6 +362,7 @@ GameObject:
   - component: {fileID: 54886064}
   - component: {fileID: 54886068}
   - component: {fileID: 54886069}
+  - component: {fileID: 54886070}
   m_Layer: 0
   m_Name: Dinosauirido
   m_TagString: Player
@@ -546,6 +547,19 @@ MonoBehaviour:
   _velocidadMovimiento: 5
   _cuerpoRigido2D: {fileID: 54886064}
   _detectorSuelo: {fileID: 1577801802}
+--- !u!114 &54886070
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 54886062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd9073da8b65442448718a3169fee2e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerStats
+  _puntosVida: 100
 --- !u!1 &69207543
 GameObject:
   m_ObjectHideFlags: 0
@@ -648,7 +662,7 @@ GameObject:
   - component: {fileID: 73677392}
   - component: {fileID: 73677395}
   - component: {fileID: 73677394}
-  - component: {fileID: 73677393}
+  - component: {fileID: 73677396}
   m_Layer: 0
   m_Name: Triangle (1)
   m_TagString: Untagged
@@ -671,18 +685,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1311615007}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &73677393
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 73677391}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6219db4b8bb3c2a4da41e5176aadd4b8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Trampamortal
 --- !u!60 &73677394
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -792,6 +794,19 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &73677396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 73677391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddf7957016bbdbb4cb8a6d578e29989d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObstaculoMortal
+  _playerstats: {fileID: 54886070}
 --- !u!1 &73773966
 GameObject:
   m_ObjectHideFlags: 0
@@ -1041,6 +1056,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf7957016bbdbb4cb8a6d578e29989d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObstaculoMortal
+  _playerstats: {fileID: 54886070}
 --- !u!1 &88879972
 GameObject:
   m_ObjectHideFlags: 0
@@ -1761,6 +1777,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf7957016bbdbb4cb8a6d578e29989d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObstaculoMortal
+  _playerstats: {fileID: 54886070}
 --- !u!1 &173130746
 GameObject:
   m_ObjectHideFlags: 0
@@ -2286,6 +2303,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf7957016bbdbb4cb8a6d578e29989d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObstaculoMortal
+  _playerstats: {fileID: 54886070}
 --- !u!1 &191344672
 GameObject:
   m_ObjectHideFlags: 0
@@ -2444,6 +2462,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf7957016bbdbb4cb8a6d578e29989d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObstaculoMortal
+  _playerstats: {fileID: 54886070}
 --- !u!1 &200219851
 GameObject:
   m_ObjectHideFlags: 0
@@ -3982,6 +4001,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf7957016bbdbb4cb8a6d578e29989d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObstaculoMortal
+  _playerstats: {fileID: 54886070}
 --- !u!1 &322085000
 GameObject:
   m_ObjectHideFlags: 0
@@ -4278,6 +4298,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf7957016bbdbb4cb8a6d578e29989d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObstaculoMortal
+  _playerstats: {fileID: 54886070}
 --- !u!1 &323932777
 GameObject:
   m_ObjectHideFlags: 0
@@ -4703,7 +4724,7 @@ GameObject:
   - component: {fileID: 356265630}
   - component: {fileID: 356265633}
   - component: {fileID: 356265632}
-  - component: {fileID: 356265631}
+  - component: {fileID: 356265634}
   m_Layer: 0
   m_Name: Triangle
   m_TagString: Untagged
@@ -4726,18 +4747,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 930477209}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &356265631
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 356265629}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6219db4b8bb3c2a4da41e5176aadd4b8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Trampamortal
 --- !u!60 &356265632
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -4847,6 +4856,19 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &356265634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 356265629}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddf7957016bbdbb4cb8a6d578e29989d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObstaculoMortal
+  _playerstats: {fileID: 54886070}
 --- !u!1 &357027417
 GameObject:
   m_ObjectHideFlags: 0
@@ -5830,6 +5852,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf7957016bbdbb4cb8a6d578e29989d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObstaculoMortal
+  _playerstats: {fileID: 54886070}
 --- !u!1 &478118704
 GameObject:
   m_ObjectHideFlags: 0
@@ -6860,6 +6883,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf7957016bbdbb4cb8a6d578e29989d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObstaculoMortal
+  _playerstats: {fileID: 54886070}
 --- !u!1 &528709021
 GameObject:
   m_ObjectHideFlags: 0
@@ -7100,7 +7124,7 @@ GameObject:
   - component: {fileID: 539716633}
   - component: {fileID: 539716636}
   - component: {fileID: 539716635}
-  - component: {fileID: 539716634}
+  - component: {fileID: 539716637}
   m_Layer: 0
   m_Name: Triangle (1)
   m_TagString: Untagged
@@ -7123,18 +7147,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 798080837}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &539716634
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 539716632}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6219db4b8bb3c2a4da41e5176aadd4b8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Trampamortal
 --- !u!60 &539716635
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -7244,6 +7256,19 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &539716637
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 539716632}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddf7957016bbdbb4cb8a6d578e29989d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObstaculoMortal
+  _playerstats: {fileID: 54886070}
 --- !u!1 &542538511
 GameObject:
   m_ObjectHideFlags: 0
@@ -7630,6 +7655,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf7957016bbdbb4cb8a6d578e29989d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObstaculoMortal
+  _playerstats: {fileID: 54886070}
 --- !u!1 &556139213
 GameObject:
   m_ObjectHideFlags: 0
@@ -8293,6 +8319,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf7957016bbdbb4cb8a6d578e29989d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObstaculoMortal
+  _playerstats: {fileID: 54886070}
 --- !u!1 &623030027
 GameObject:
   m_ObjectHideFlags: 0
@@ -8818,6 +8845,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf7957016bbdbb4cb8a6d578e29989d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObstaculoMortal
+  _playerstats: {fileID: 54886070}
 --- !u!1 &654476004
 GameObject:
   m_ObjectHideFlags: 0
@@ -9670,7 +9698,7 @@ Transform:
   m_GameObject: {fileID: 798080835}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 11.178823, y: -0.5452943, z: 0}
+  m_LocalPosition: {x: 11.208422, y: -0.5452943, z: 0}
   m_LocalScale: {x: 2.3208697, y: 2.0887067, z: 0.8186655}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -11046,6 +11074,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf7957016bbdbb4cb8a6d578e29989d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObstaculoMortal
+  _playerstats: {fileID: 54886070}
 --- !u!1 &906417279
 GameObject:
   m_ObjectHideFlags: 0
@@ -11296,6 +11325,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf7957016bbdbb4cb8a6d578e29989d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObstaculoMortal
+  _playerstats: {fileID: 54886070}
 --- !u!1 &911890587
 GameObject:
   m_ObjectHideFlags: 0
@@ -11610,7 +11640,7 @@ Transform:
   m_GameObject: {fileID: 930477207}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 1, w: 0.0000029802316}
-  m_LocalPosition: {x: 11.25243, y: 0.9153151, z: 0}
+  m_LocalPosition: {x: 11.282028, y: 0.9153151, z: 0}
   m_LocalScale: {x: 0.4468477, y: 0.9857059, z: 1.0690966}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -11776,6 +11806,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf7957016bbdbb4cb8a6d578e29989d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObstaculoMortal
+  _playerstats: {fileID: 54886070}
 --- !u!1 &937153316
 GameObject:
   m_ObjectHideFlags: 0
@@ -12186,6 +12217,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf7957016bbdbb4cb8a6d578e29989d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObstaculoMortal
+  _playerstats: {fileID: 54886070}
 --- !u!1 &941476451
 GameObject:
   m_ObjectHideFlags: 0
@@ -13809,6 +13841,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf7957016bbdbb4cb8a6d578e29989d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObstaculoMortal
+  _playerstats: {fileID: 54886070}
 --- !u!1 &1071959060
 GameObject:
   m_ObjectHideFlags: 0
@@ -13997,7 +14030,7 @@ GameObject:
   - component: {fileID: 1081900309}
   - component: {fileID: 1081900312}
   - component: {fileID: 1081900311}
-  - component: {fileID: 1081900310}
+  - component: {fileID: 1081900313}
   m_Layer: 0
   m_Name: Triangle
   m_TagString: Untagged
@@ -14020,18 +14053,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1991934570}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1081900310
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1081900308}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6219db4b8bb3c2a4da41e5176aadd4b8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Trampamortal
 --- !u!60 &1081900311
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -14141,6 +14162,19 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &1081900313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1081900308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddf7957016bbdbb4cb8a6d578e29989d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObstaculoMortal
+  _playerstats: {fileID: 54886070}
 --- !u!1 &1082754287
 GameObject:
   m_ObjectHideFlags: 0
@@ -14897,7 +14931,7 @@ Transform:
   m_GameObject: {fileID: 1116367554}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 1, w: 0.0000029802316}
-  m_LocalPosition: {x: 10.956404, y: 0.9153151, z: 0}
+  m_LocalPosition: {x: 10.986002, y: 0.9153151, z: 0}
   m_LocalScale: {x: 0.4468477, y: 0.9857059, z: 1.0690966}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -15468,6 +15502,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf7957016bbdbb4cb8a6d578e29989d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObstaculoMortal
+  _playerstats: {fileID: 54886070}
 --- !u!1 &1177310462
 GameObject:
   m_ObjectHideFlags: 0
@@ -15808,6 +15843,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf7957016bbdbb4cb8a6d578e29989d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObstaculoMortal
+  _playerstats: {fileID: 54886070}
 --- !u!1 &1192776309
 GameObject:
   m_ObjectHideFlags: 0
@@ -16595,6 +16631,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf7957016bbdbb4cb8a6d578e29989d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObstaculoMortal
+  _playerstats: {fileID: 54886070}
 --- !u!1 &1296109375
 GameObject:
   m_ObjectHideFlags: 0
@@ -16983,6 +17020,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf7957016bbdbb4cb8a6d578e29989d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObstaculoMortal
+  _playerstats: {fileID: 54886070}
 --- !u!1 &1307414345
 GameObject:
   m_ObjectHideFlags: 0
@@ -17100,7 +17138,7 @@ Transform:
   m_GameObject: {fileID: 1311615006}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10.865196, y: -0.5452943, z: 0}
+  m_LocalPosition: {x: 10.894794, y: -0.5452943, z: 0}
   m_LocalScale: {x: 2.3208697, y: 2.0887067, z: 0.8186655}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -17829,6 +17867,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf7957016bbdbb4cb8a6d578e29989d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObstaculoMortal
+  _playerstats: {fileID: 54886070}
 --- !u!1 &1380151478
 GameObject:
   m_ObjectHideFlags: 0
@@ -18125,6 +18164,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf7957016bbdbb4cb8a6d578e29989d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObstaculoMortal
+  _playerstats: {fileID: 54886070}
 --- !u!1 &1392380630
 GameObject:
   m_ObjectHideFlags: 0
@@ -20054,6 +20094,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf7957016bbdbb4cb8a6d578e29989d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObstaculoMortal
+  _playerstats: {fileID: 54886070}
 --- !u!1 &1514401608
 GameObject:
   m_ObjectHideFlags: 0
@@ -20065,7 +20106,7 @@ GameObject:
   - component: {fileID: 1514401609}
   - component: {fileID: 1514401612}
   - component: {fileID: 1514401611}
-  - component: {fileID: 1514401610}
+  - component: {fileID: 1514401613}
   m_Layer: 0
   m_Name: Triangle
   m_TagString: Untagged
@@ -20088,18 +20129,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1116367556}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1514401610
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1514401608}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6219db4b8bb3c2a4da41e5176aadd4b8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Trampamortal
 --- !u!60 &1514401611
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -20209,6 +20238,19 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &1514401613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1514401608}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddf7957016bbdbb4cb8a6d578e29989d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObstaculoMortal
+  _playerstats: {fileID: 54886070}
 --- !u!1 &1521299122
 GameObject:
   m_ObjectHideFlags: 0
@@ -21009,6 +21051,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf7957016bbdbb4cb8a6d578e29989d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObstaculoMortal
+  _playerstats: {fileID: 54886070}
 --- !u!1 &1577113685
 GameObject:
   m_ObjectHideFlags: 0
@@ -22409,6 +22452,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf7957016bbdbb4cb8a6d578e29989d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObstaculoMortal
+  _playerstats: {fileID: 54886070}
 --- !u!1 &1625760060
 GameObject:
   m_ObjectHideFlags: 0
@@ -22420,7 +22464,7 @@ GameObject:
   - component: {fileID: 1625760061}
   - component: {fileID: 1625760064}
   - component: {fileID: 1625760063}
-  - component: {fileID: 1625760062}
+  - component: {fileID: 1625760065}
   m_Layer: 0
   m_Name: Triangle
   m_TagString: Untagged
@@ -22443,18 +22487,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1634903634}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1625760062
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1625760060}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6219db4b8bb3c2a4da41e5176aadd4b8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Trampamortal
 --- !u!60 &1625760063
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -22564,6 +22596,19 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &1625760065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1625760060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddf7957016bbdbb4cb8a6d578e29989d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObstaculoMortal
+  _playerstats: {fileID: 54886070}
 --- !u!1 &1625861344
 GameObject:
   m_ObjectHideFlags: 0
@@ -22681,7 +22726,7 @@ Transform:
   m_GameObject: {fileID: 1634903633}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.022402044, y: -0.019018423, z: 0}
+  m_LocalPosition: {x: 0.052, y: -0.019018423, z: 0}
   m_LocalScale: {x: 0.44684723, y: 0.9857047, z: 1.0690953}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -23141,6 +23186,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf7957016bbdbb4cb8a6d578e29989d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObstaculoMortal
+  _playerstats: {fileID: 54886070}
 --- !u!1 &1690277420
 GameObject:
   m_ObjectHideFlags: 0
@@ -23804,6 +23850,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf7957016bbdbb4cb8a6d578e29989d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObstaculoMortal
+  _playerstats: {fileID: 54886070}
 --- !u!1 &1731287578
 GameObject:
   m_ObjectHideFlags: 0
@@ -23962,6 +24009,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf7957016bbdbb4cb8a6d578e29989d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObstaculoMortal
+  _playerstats: {fileID: 54886070}
 --- !u!1 &1747395027
 GameObject:
   m_ObjectHideFlags: 0
@@ -24616,7 +24664,7 @@ GameObject:
   - component: {fileID: 1772283180}
   - component: {fileID: 1772283183}
   - component: {fileID: 1772283182}
-  - component: {fileID: 1772283181}
+  - component: {fileID: 1772283184}
   m_Layer: 0
   m_Name: Triangle (1)
   m_TagString: Untagged
@@ -24639,18 +24687,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1982800732}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1772283181
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1772283179}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6219db4b8bb3c2a4da41e5176aadd4b8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Trampamortal
 --- !u!60 &1772283182
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -24760,6 +24796,19 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &1772283184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1772283179}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddf7957016bbdbb4cb8a6d578e29989d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObstaculoMortal
+  _playerstats: {fileID: 54886070}
 --- !u!1 &1775088936
 GameObject:
   m_ObjectHideFlags: 0
@@ -24771,7 +24820,7 @@ GameObject:
   - component: {fileID: 1775088937}
   - component: {fileID: 1775088940}
   - component: {fileID: 1775088939}
-  - component: {fileID: 1775088938}
+  - component: {fileID: 1775088941}
   m_Layer: 0
   m_Name: Triangle (1)
   m_TagString: Untagged
@@ -24794,18 +24843,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1915446191}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1775088938
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1775088936}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6219db4b8bb3c2a4da41e5176aadd4b8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Trampamortal
 --- !u!60 &1775088939
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -24915,6 +24952,19 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &1775088941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1775088936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddf7957016bbdbb4cb8a6d578e29989d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObstaculoMortal
+  _playerstats: {fileID: 54886070}
 --- !u!1 &1779419334
 GameObject:
   m_ObjectHideFlags: 0
@@ -25621,6 +25671,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf7957016bbdbb4cb8a6d578e29989d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObstaculoMortal
+  _playerstats: {fileID: 54886070}
 --- !u!1 &1826292946
 GameObject:
   m_ObjectHideFlags: 0
@@ -26604,6 +26655,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf7957016bbdbb4cb8a6d578e29989d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObstaculoMortal
+  _playerstats: {fileID: 54886070}
 --- !u!1 &1887820807
 GameObject:
   m_ObjectHideFlags: 0
@@ -26903,7 +26955,7 @@ Transform:
   m_GameObject: {fileID: 1915446190}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.7985595, y: 0.2928824, z: 0}
+  m_LocalPosition: {x: 1.8281575, y: 0.2928824, z: 0}
   m_LocalScale: {x: 2.3208697, y: 2.0887067, z: 0.8186655}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -27128,6 +27180,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf7957016bbdbb4cb8a6d578e29989d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObstaculoMortal
+  _playerstats: {fileID: 54886070}
 --- !u!1 &1936804339
 GameObject:
   m_ObjectHideFlags: 0
@@ -27286,6 +27339,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf7957016bbdbb4cb8a6d578e29989d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObstaculoMortal
+  _playerstats: {fileID: 54886070}
 --- !u!1 &1938949383
 GameObject:
   m_ObjectHideFlags: 0
@@ -27626,6 +27680,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf7957016bbdbb4cb8a6d578e29989d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObstaculoMortal
+  _playerstats: {fileID: 54886070}
 --- !u!1 &1960932274
 GameObject:
   m_ObjectHideFlags: 0
@@ -27784,6 +27839,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf7957016bbdbb4cb8a6d578e29989d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObstaculoMortal
+  _playerstats: {fileID: 54886070}
 --- !u!1 &1982800730
 GameObject:
   m_ObjectHideFlags: 0
@@ -27869,7 +27925,7 @@ Transform:
   m_GameObject: {fileID: 1982800730}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 11.47892, y: -0.5452943, z: 0}
+  m_LocalPosition: {x: 11.508518, y: -0.5452943, z: 0}
   m_LocalScale: {x: 2.4137275, y: 2.0887067, z: 0.8186655}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -28173,6 +28229,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf7957016bbdbb4cb8a6d578e29989d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObstaculoMortal
+  _playerstats: {fileID: 54886070}
 --- !u!1 &1991934569
 GameObject:
   m_ObjectHideFlags: 0
@@ -28199,7 +28256,7 @@ Transform:
   m_GameObject: {fileID: 1991934569}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 1, w: 0.0000029802316}
-  m_LocalPosition: {x: 6.709626, y: 0.9153151, z: 0}
+  m_LocalPosition: {x: 6.739224, y: 0.9153151, z: 0}
   m_LocalScale: {x: 0.4468477, y: 0.9857059, z: 1.0690966}
   m_ConstrainProportionsScale: 0
   m_Children:
