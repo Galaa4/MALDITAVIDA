@@ -3,17 +3,15 @@ using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
-    [SerializeField] private Image barra;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    [SerializeField] private Image _barra;
+
+    public void ActualizarFillAmount(float porcentaje)
     {
-        barra.color = Color.cyan;
-        barra.fillAmount = 0.5f;
+        _barra.fillAmount = porcentaje;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void ColorBarra(Color nuevoColor)
     {
-        
+        _barra.color = nuevoColor;
     }
 }
