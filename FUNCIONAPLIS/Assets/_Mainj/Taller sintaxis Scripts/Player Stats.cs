@@ -44,6 +44,10 @@ public class PlayerStats : MonoBehaviour
             {
                 _uiManager.ColorBarra(Color.green);
             }
+            if (_puntosVida <= 0)
+            {
+                Destroy(this.gameObject);
+            }
         }
     }
 }
