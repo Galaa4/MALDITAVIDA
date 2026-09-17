@@ -1,34 +1,50 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerStats : MonoBehaviour
 {
-    [SerializeField] private UIManager _uiManager;
     [SerializeField] private int _puntosVida = 100;
+    [SerializeField] private int _vidaMaxima = 100;
+    [SerializeField] private UIManager _uiManager;
     public void RestarVida(int daño)
     {
-        _puntosVida = _puntosVida - daño;
+        _puntosVida -= daño;
+        if (_puntosVida < 0) _puntosVida = 0;
+
+        ActualizarBarra();
+        Debug.Log("Vida actual: " + _puntosVida);
     }
-    public void SumarVida(int vida)
+    public void SumarVida(int cantidad)
     {
-        _puntosVida += vida;
+        _puntosVida += cantidad;
+
+        if (_puntosVida > _vidaMaxima)
+        {
+            _puntosVida = _vidaMaxima;
+        }
+
+        ActualizarBarra();
+        Debug.Log("Vida actual: " + _puntosVida);
     }
-
-    private void Update()
+    private void ActualizarBarra()
     {
-        if (_puntosVida >= 80)
+        float porcentajeVida = (float)_puntosVida / _vidaMaxima;
+        if (_uiManager != null)
         {
-            _uiManager.ColorBarra(Color.green);
-        }
+            _uiManager.ActualizarFillAmount(porcentajeVida);
 
-        if (40 <= _puntosVida && _puntosVida < 80)
-        {
-            _uiManager.ColorBarra(Color.yellow);
+            if (porcentajeVida <= 0.25f)
+            {
+                _uiManager.ColorBarra(Color.red); 
+            }
+            else if (porcentajeVida <= 0.6f)
+            {
+                _uiManager.ColorBarra(Color.yellow); 
+            }
+            else
+            {
+                _uiManager.ColorBarra(Color.green); 
+            }
         }
-
-        if (_puntosVida < 40)
-        {
-            _uiManager.ColorBarra(Color.red);
-        }
-
     }
 }

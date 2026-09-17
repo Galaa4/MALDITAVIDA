@@ -1,25 +1,17 @@
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
     [SerializeField] private Image _barra;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    public void SumarFillAmount(float amount)
+
+    public void ActualizarFillAmount(float porcentaje)
     {
-        _barra.fillAmount += amount;
+        _barra.fillAmount = porcentaje;
     }
 
-    // Update is called once per frame
-    public void RestarFillAmount (float amount)
+    public void ColorBarra(Color nuevoColor)
     {
-        _barra.fillAmount = _barra.fillAmount - amount;
+        _barra.color = nuevoColor;
     }
-
-    public void ColorBarra(Color color)
-    {
-
-    }
-
 }
