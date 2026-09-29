@@ -2,6 +2,7 @@ using UnityEngine;
  
 public class MovimientoJugador : MonoBehaviour
 {
+    [SerializeField] private MovimientoJugador movimientoJugador;
     [SerializeField] private float _fuerzaSalto = 5f;
     [SerializeField] private float _velocidadMovimiento = 5f;
     [SerializeField] private Rigidbody2D _cuerpoRigido2D;
