@@ -3701,7 +3701,7 @@ GameObject:
   - component: {fileID: 305549798}
   - component: {fileID: 305549801}
   - component: {fileID: 305549800}
-  - component: {fileID: 305549799}
+  - component: {fileID: 305549802}
   m_Layer: 0
   m_Name: Triangle
   m_TagString: Untagged
@@ -3724,18 +3724,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1043663807}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &305549799
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 305549797}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6219db4b8bb3c2a4da41e5176aadd4b8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Trampamortal
 --- !u!60 &305549800
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -3845,6 +3833,19 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &305549802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 305549797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddf7957016bbdbb4cb8a6d578e29989d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObstaculoMortal
+  _playerstats: {fileID: 54886070}
 --- !u!1 &319603246
 GameObject:
   m_ObjectHideFlags: 0
