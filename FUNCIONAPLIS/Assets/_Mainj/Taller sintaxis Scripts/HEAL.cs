@@ -1,21 +1,22 @@
 using UnityEngine;
 
-public class HealingItem : MonoBehaviour
+public class Heal : MonoBehaviour
 {
-    [SerializeField] private int _Healamount = 20;
 
+    [SerializeField] private PlayerStats _playerStats;
+    [SerializeField] private UIManager _uiManager;
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
+        if (collision.gameObject.tag == "Player")
         {
-            PlayerStats stats = collision.GetComponent<PlayerStats>();
 
-            if (stats != null)
-            {
-                stats.SumarVida(_Healamount);
+            _playerStats.SumarVida(10);
+            _uiManager.SumarFillAmount(0.1f);
+            Destroy(this.gameObject);
 
-                Destroy(gameObject);
-            }
         }
+
+
     }
+
 }

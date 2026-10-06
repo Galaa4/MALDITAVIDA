@@ -2,15 +2,16 @@ using UnityEngine;
 
 public class ObstaculoMortal : MonoBehaviour
 {
-    [SerializeField] private PlayerStats _playerstats;
-    private void OnCollisionEnter2D(Collision2D collision)
+    [SerializeField] private PlayerStats _playerStats;
+    [SerializeField] private UIManager _uiManager;
+    private void OnCollisionEnter2D(Collision2D colision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (colision.gameObject.tag == "Player")
         {
-            if (_playerstats != null)
-            {
-                _playerstats.RestarVida(10);
-            }
+            _playerStats.RestarVida(20);
+            _uiManager.RestarFillAmount(0.2f);
         }
+
+
     }
 }
