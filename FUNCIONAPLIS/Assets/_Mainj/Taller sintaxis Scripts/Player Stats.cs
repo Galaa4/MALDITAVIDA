@@ -5,6 +5,7 @@ public class PlayerStats : MonoBehaviour
     [SerializeField] private int _puntosVida = 100;
     [SerializeField] private int _vidaMaxima = 100;
     [SerializeField] private UIManager _uiManager;
+    [SerializeField] private GameManager _gameManager;
     public void RestarVida(int daño)
     {
         _puntosVida -= daño;
@@ -46,7 +47,7 @@ public class PlayerStats : MonoBehaviour
             }
             if (_puntosVida <= 0)
             {
-                Destroy(this.gameObject);
+                _gameManager.PausarElJuego();
             }
         }
     }
